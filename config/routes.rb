@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :meshiterro
+  resources :post_images, only: [:new, :show, :index]
+  get 'post_image/new'
+  get 'post_image/show'
+  get 'post_image/index'
+  # resources :meshiterro
   devise_for :users
   root to: "homes#top"
   get '/homes/about' => 'homes#about', as: 'about'
