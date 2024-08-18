@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
   resources :users, only: [:show, :edit]
   resources :post_images, only: [:new, :create, :show, :index, :destroy]
-  get 'post_image/new'
-  get 'post_image/show'
-  get 'post_image/index'
   # resources :meshiterro
   devise_for :users
   root to: "homes#top"
